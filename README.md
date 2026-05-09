@@ -6,9 +6,9 @@ Today our team competed in CyberChallenge.IT 2026 — one of Italy's most presti
 
 Albania Team #85. A team with a plan. A team with roles. A team that hit #1.
 
-━━━━━━━━━━━━━━━━━━━━━━━━━
+
 📞 THE CALL — BEFORE EVERYTHING
-━━━━━━━━━━━━━━━━━━━━━━━━━
+
 
 Before a single line of code was written, before VPN was configured, before the competition even opened — we got on a Discord call.
 
@@ -25,9 +25,9 @@ Monitoring Tulip traffic in real time, detecting incoming attacks, analyzing PCA
 
 This was not improvisation. This was structured offense and defense.
 
-━━━━━━━━━━━━━━━━━━━━━━━━━
+
 🔍 DAY BEFORE — RECONNAISSANCE
-━━━━━━━━━━━━━━━━━━━━━━━━━
+
 
 The day before the competition, I ran a single curl command against the gameserver's public endpoint:
 
@@ -39,9 +39,9 @@ The response contained the full team list — IDs, shortnames, and enough metada
 
 This is not a vulnerability — it's the intended design. But in Attack & Defense, preparation is offense.
 
-━━━━━━━━━━━━━━━━━━━━━━━━━
+
 🔧 INFRASTRUCTURE — BUILT AS A TEAM
-━━━━━━━━━━━━━━━━━━━━━━━━━
+
 
 The team deployed and configured the full operations stack together:
 
@@ -66,9 +66,9 @@ A full web dashboard developed specifically for this competition — live servic
 
 Every tool was live and tested before the first slot opened.
 
-━━━━━━━━━━━━━━━━━━━━━━━━━
+
 ⚔️ GRACE PERIOD — 30 MINUTES, EVERY SECOND COUNTS
-━━━━━━━━━━━━━━━━━━━━━━━━━
+
 
 The moment SSH access opened, the clock started.
 
@@ -95,13 +95,13 @@ While I was building exploits, the Patching Team was analyzing the backup and th
 
 30 minutes. Three parallel workstreams. Zero wasted time.
 
-━━━━━━━━━━━━━━━━━━━━━━━━━
+
 🚩 THE SERVICES & VULNERABILITIES
-━━━━━━━━━━━━━━━━━━━━━━━━━
+
 
 The vulnbox ran 4 services. Here is what the Red Team found and exploited:
 
-──────────────────────────
+
 1️⃣ SeaOfHackerz — Port 5050
 Vulnerability: SQL Injection via raw Python string formatting
 
@@ -120,7 +120,7 @@ Exploit flow:
 
 Result: 366+ flags | +5,029 attack points
 
-──────────────────────────
+
 2️⃣ GadgetHorse — Port 3000
 Vulnerability: IDOR via Cookie Manipulation
 
@@ -135,7 +135,7 @@ By encoding any productId from the Flag IDs endpoint into the cart cookie, I cou
 
 Result: 105+ flags | +1,760 attack points
 
-──────────────────────────
+
 3️⃣ CheesyCheats — Port 5000/5555 (gRPC + TLS)
 Vulnerability: Diffie-Hellman Authentication Bypass
 
@@ -158,13 +158,13 @@ Exploit flow:
 
 Tools: grpcio, grpcio-tools, TLS with ca-cert.pem extracted from vulnbox
 
-──────────────────────────
+
 4️⃣ MineCClicker — Port 9999
 Binary service over TCP (socat). SLA issues detected (~92%) but full exploitation was not completed within the competition window.
 
-━━━━━━━━━━━━━━━━━━━━━━━━━
+
 📊 PEAK PERFORMANCE
-━━━━━━━━━━━━━━━━━━━━━━━━━
+
 
 When the network opened and the exploits hit:
 
@@ -193,9 +193,9 @@ The ban held for the remainder of the slot. We watched the scoreboard from the o
 
 The #1 was ours. The lesson belongs to all of us.
 
-━━━━━━━━━━━━━━━━━━━━━━━━━
+
 💡 LESSONS LEARNED
-━━━━━━━━━━━━━━━━━━━━━━━━━
+
 
 ▸ SQL Injection is still alive and critical in 2026 — parameterized queries are not optional
 ▸ Custom cryptography breaks at the edges — always validate g_a = 0 and g_a = 1 in DH implementations
@@ -205,7 +205,7 @@ The #1 was ours. The lesson belongs to all of us.
 ▸ Role separation works — SOC + Red Team + Patching Team is the right structure
 ▸ Infrastructure preparation before the competition is half the battle
 
-━━━━━━━━━━━━━━━━━━━━━━━━━
+
 
 Thank you to CINI Cybersecurity National Lab and Gaspare Ferraro for organizing this simulation and for including Albania. Competing alongside Italian ECSC champions was a privilege.
 
